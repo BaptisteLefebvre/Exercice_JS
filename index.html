@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="titre"> Bienvenu sur notre site de Voyage !</p>
+    <p class="titre">Lorem, ipsum.</p>
 
+    <div>
+        <img onclick="agrandirIMG('img1')" id="img1" src="./img/famous-buildings-round-the-world-travel-wallpaper.jpg" alt="">
+        <button onclick="ecrireLu('lu1','btn1')" id="btn1">Lire</button>
+        <p id="lu1"></p>
+    </div>
+    <div>
+        <img onclick="agrandirIMG('img2')" id="img2" src="./img/63046277-45546518.jpg">
+        <button onclick="ecrireLu('lu2','btn2')" id="btn2">Lire</button>
+        <p id="lu2"></p>
+    </div>
+    <div>
+        <img onclick="agrandirIMG('img3')" id="img3" src="./img/club-createur-voyage.png">
+        <button onclick="ecrireLu('lu3','btn3')" id="btn3">Lire</button>
+        <p id="lu3"></p>
+    </div>
+</body>
+</html>
+<style>
+    .titre {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .titre2 {
+        text-align: left;
+        margin-top: 50px;
+    }
+
+    div {
+        margin-top: 100px;
+        width:30%;
+        height:400px;
+        float: left;
+        background-color: rgb(187, 186, 186);
+        margin-left: 2.5%;
+    }
+
+    div p {
+        text-align: center;
+        margin-top: 10px;
+        width:20%;
+        margin-left: 40%;
+    }
+
+    div button {
+        width: 20%;
+        margin-left: 40%;
+        border-radius: 20px;
+        border:1px;
+    }
+
+    div img {
+        width: 100%;
+        height: 300px;
+    }
+</style>
+<script>
+   function ecrireLu(id,btnid)
+   {
+    document.getElementById(id).innerHTML = "lu"
+    changerColor(btnid)
+   }
+
+   function changerColor(id)
+   {
+    document.getElementById(id).style.backgroundColor = "red"
+   }
+
+   function agrandirIMG(id)
+   {
+    let doc = document.getElementById(id)
+    if(doc.style.width == "120%"){
+        doc.style.width = "100%"
+        doc.style.marginLeft = "0"
+    }else{
+        doc.style.width = "120%"
+        doc.style.marginLeft = "-10%"
+    }
+   }
+</script>
